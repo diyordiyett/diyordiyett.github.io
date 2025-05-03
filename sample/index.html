@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>diyordiyett</title>
+        <link   rel="stylesheet" 
+                href="sample\css\style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">GeeksforGeeks</h1>
+            <h3 class="title">Sliding Login & Registration Form</h3>
+        </header>
+    
+        <!-- container div -->
+        <div class="container">
+    
+            <!-- upper button section to select
+                 the login or signup form -->
+            <div class="slider"></div>
+            <div class="btn">
+                <button class="login">Login</button>
+                <button class="signup">Signup</button>
+            </div>
+    
+            <!-- Form section that contains the
+                 login and the signup form -->
+            <div class="form-section">
+    
+                <!-- login form -->
+                <div class="login-box">
+                    <input type="email" 
+                           class="email ele" 
+                           placeholder="youremail@email.com">
+                    <input type="password"
+                           class="password ele" 
+                           placeholder="password">
+                    <button class="clkbtn">Login</button>
+                </div>
+    
+                <!-- signup form -->
+                <div class="signup-box">
+                    <input type="text" 
+                           class="name ele" 
+                           placeholder="Enter your name">
+                    <input type="email" 
+                           class="email ele" 
+                           placeholder="youremail@email.com">
+                    <input type="password" 
+                           class="password ele" 
+                           placeholder="password">
+                    <input type="password" 
+                           class="password ele" 
+                           placeholder="Confirm password">
+                    <button class="clkbtn">Signup</button>
+                </div>
+            </div>
+        </div>
+        <script src="sample\js\index.js"></script>
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+        
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+            apiKey: "AIzaSyBW_4luEisN8-jjxVVncfk-a0D8UyYpgiU",
+            authDomain: "diyordiyett-98cc1.firebaseapp.com",
+            projectId: "diyordiyett-98cc1",
+            storageBucket: "diyordiyett-98cc1.firebasestorage.app",
+            messagingSenderId: "1062977560221",
+            appId: "1:1062977560221:web:0d14c42fadb1776a93be74",
+            measurementId: "G-0K6S8NGE5Q"
+            };
+        
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            try {
+                const analytics = getAnalytics(app);
+            } catch (err) {
+                console.warn("Analytics failed to load:", err);
+            }
+        </script>
+    </body>
+</html>
